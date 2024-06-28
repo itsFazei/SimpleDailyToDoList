@@ -2,11 +2,12 @@
   "name": "simpledailytodolist",
   "version": "1.0.0",
   "description": "A simple project made by ItsFazei to make a daily To Do List",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run lint && tsc && npm run start",
     "lint": "eslint . --max-warnings 0",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
     "@types/eslint__js": "^8.42.3",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
+    "electron": "^31.1.0",
     "eslint": "^8.57.0",
     "typescript": "^5.5.2",
     "typescript-eslint": "^7.14.1"
